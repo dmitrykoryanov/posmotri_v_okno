@@ -64,6 +64,10 @@ a {
     position: relative;
 }
 
+.result__video {
+    object-fit: cover;
+}
+
 .search-form {
     display: grid;
     grid-template-columns: 225px 212px 194px;
@@ -90,6 +94,8 @@ a {
 .search-form__label {
     width: fit-content;
     align-self: center;
+    display: flex;
+    align-items: center;
 }
 
 .borders {
@@ -147,6 +153,8 @@ a {
     width: 19px;
     height: 19px;
     border: 1px solid currentColor;
+    display: flex;
+    justify-content: center;
 }
 
 .search-form__pseudo-checkbox:focus {
@@ -163,13 +171,11 @@ a {
     outline-offset: 1px;
 }
 
-.search-form__pseudo-checkbox:active::before + span {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
     content: '';
-    position: relative;
-    inset: 0;
-    width: 19px;
-    height: 19px;
-    background-color: #ffffff;
+    min-inline-size: 15px;
+    min-block-size: 15px;
+    background-color: currentColor;
 }
 
 .button {
@@ -205,8 +211,8 @@ a {
 }
 
 .content {
-    align-self: center;
-    /*margin-top: 133px;*/
+    /*align-self: center;*/
+    margin-top: 133px;
     width: 1200px;
     display: grid;
     grid-template-columns: 711px 399px;
@@ -253,7 +259,7 @@ a {
     display: grid;
     grid-template-columns: 200px 194px;
     padding-top: 2px;
-    padding-bottom: 2px;
+    /*padding-bottom: 2px;*/
 }
 
 .content__card-link {
@@ -280,7 +286,7 @@ a {
     font-family: Oswald, sans-serif;
     font-weight: 700;
     font-size: 30px;
-    line-height: 30px;
+    line-height: 1;
     text-transform: uppercase;
     overflow: hidden;
     white-space: nowrap;
@@ -292,6 +298,13 @@ a {
     font-weight: 400;
     font-size: 18px;
     line-height: 16.2px;
+}
+
+.content__video-card-thumbnail {
+    min-inline-size: 194px;
+    block-size: 103px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .content__video-card-description-container {
