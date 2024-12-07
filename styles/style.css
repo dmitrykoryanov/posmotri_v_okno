@@ -109,7 +109,7 @@ a {
     gap: 5px;
 }
 
-.search-form__checkbox:hover {
+.search-form__checkbox:hover .search-form__label-text {
     text-decoration: underline;
 }
 
@@ -187,9 +187,6 @@ a {
     line-height: 21.6px;
     font-weight: 700;
     height: 34px;
-}
-
-.button {
     align-self: end;
 }
 
@@ -213,6 +210,7 @@ a {
 .content {
     align-self: center;
     width: 1200px;
+    height: 534px;
     display: grid;
     grid-template-columns: 711px 399px;
     justify-content: space-evenly;
@@ -220,7 +218,7 @@ a {
 
 .content__details {
     width: 399px;
-    height: 534px;
+    /*height: 534px;*/
     overflow-x: auto;
     overflow-y: auto;
     scrollbar-width: none;
@@ -249,7 +247,10 @@ a {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 34px;
+}
+
+.content__list-item:not(:last-of-type) {
+    margin-bottom: 34px;
 }
 
 .content__video-card {
@@ -258,7 +259,6 @@ a {
     display: grid;
     grid-template-columns: 200px 194px;
     padding-top: 2px;
-    /*padding-bottom: 2px;*/
 }
 
 .content__card-link {
